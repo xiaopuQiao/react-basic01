@@ -2,12 +2,15 @@
 //   return <button>click me！</button>;
 
 import { useState } from "react";
-
+import  './index.css'
 // }
 const Button = () => {
   return <button>click me！</button>;
 };
-
+const style = {
+    color: 'red',
+    fontSize: '50px'
+}
 function App() {
   let [count, setCount] = useState(0);
   const handleClick = () => {
@@ -30,6 +33,9 @@ function App() {
       <Button></Button>
       <button onClick={handleClick}>{count}</button>
       <button onClick={changeForm}>修改form：{form.name}</button>
+        {/*<span style={{color:'red',fontSize:'50px'}}>this is span</span>*/}
+        {/*<span style={style}>this is span</span>*/}
+        <span className="foo">this is class foo</span>
     </div>
   );
 }
