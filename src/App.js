@@ -1,5 +1,25 @@
+// function Button() {
+//   return <button>click me！</button>;
+
+import { useState } from "react";
+
+// }
+const Button = () => {
+  return <button>click me！</button>;
+};
+
 function App() {
-  return <div className="App">this is div</div>;
+  const [count, setCount] = useState(0);
+  const handleClick = () => {
+    setCount(count + 1);
+  };
+  return (
+    <div className="App">
+      <Button />
+      <Button></Button>
+      <button onClick={handleClick}>{count}</button>
+    </div>
+  );
 }
 
 export default App;
